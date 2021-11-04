@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>fiche expedition</title>
+<link rel="stylesheet" type="text/css"
+	href="http://localhost:8080/webjars/bootstrap/5.0.0-beta2/css/bootstrap.min.css" />
+</head>
+<body>
+
+	<div class="container">
+
+		<h1 class="text-center">Gestion des expéditions</h1>
+
+		<div class="row">
+			<div class="col-md-4 mx-auto mt-5 text-center">
+
+				<p>
+					Expédition N° : <span th:text="${expedition.id}" class="font-weight-bold"></span>
+				</p>
+
+				<p>
+					Commande N° : <span th:text="${expedition.id}" class="font-weight-bold"></span>
+				</p>
+				<p th:text="${expedition.idCommande}" class="font-weight-bold"></p>
+
+				<span th:if="${expedition.etat == 0}">Etat 0 : commande en préparation</span>
+				<span th:if="${expedition.etat == 1}">Etat 1 : commande expédiée</span>
+				<span th:if="${expedition.etat == 2}">Etat 2 : commande livrée</span>
+
+			</div>
+		</div>
+
+	</div>
+
+
+	<script type="text/javascript"
+		src="http://localhost:8080/webjars/bootstrap/4.0.0-2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

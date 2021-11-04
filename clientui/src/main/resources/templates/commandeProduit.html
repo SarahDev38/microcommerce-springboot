@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>commande produit</title>
+</head>
+<body>
+	<div class="container">
+
+		<h1 class="text-center">Produit commandé</h1>
+
+		<div class="row">
+			<div class="col-md-4 mx-auto mt-5 text-center">
+
+				<img th:src="${produit.image}" class="card-img-top" />
+
+				<p th:text="${produit.titre}" class="font-weight-bold"></p>
+
+				<p th:text="${produit.description}"></p>
+
+				<p th:text="${produit.prix}"></p>
+
+				<p>
+					<a th:href="@{|/|}"
+						class="font-weight-bold">RETOUR ACCUEIL</a>
+				</p>
+
+			</div>
+		</div>
+</body>
+</html>
